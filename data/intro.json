@@ -1,0 +1,31 @@
+{
+  "name": "seokhun jeon",
+  "position": "Applied Software Infrastructure Researcher",
+  "description": "Focused on designing and validating scalable computing architectures and the software infrastructure that powers them.",
+  "expertise": [
+    "PIM & NPU",
+    "SW Framework",
+    "Simulation",
+    "Quantum Computing",
+    "SW-HW Co-design / optimization"
+  ],
+  "education": [
+    {"university": "Soongsil University",
+    "degree": "M.S Degree",
+    "major": "Electronics Engineering",
+    "graduation_date": "Feb, 2012"},
+    {"university": "Soongsil University",
+    "degree": "B.S Degree",
+    "major": "Electronics Engineering",
+    "graduation_date": "Feb, 2010"}
+  ],
+  "professional_experience": [
+    {"job_title": "Senior Researcher",
+    "company": "Korea Electronics Technology Institute",
+    "location": "Seongnam, Republic of Korea",
+    "dates": "Dec, 2017 - Present"},
+    {"job_title": "Senior Engineer",
+    "company": "Seagate Korea Design Center",
+    "location": "Yongin, Republic of Korea",
+    "dates": "Apr, 2013 - Mar, 2017"}]
+}

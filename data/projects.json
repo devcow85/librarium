@@ -1,0 +1,104 @@
+[
+  {
+    "title": "시뮬레이션 기반 고속/고정확도 데이터센터 워크로드/시스템 분석 플랫폼 개발",
+    "orginization": "과학기술정보통신부 (정보통신기획평가원)",
+    "period": "24.04.01~27.12.31 (24.04.01~27.12.31)",
+    "role": "연구책임자 (주관)",
+    "main_org": "한국전자기술연구원",
+    "short_description": "시뮬레이터 기반 최적 transformer 실행을 위한 프로파일링 및 실행 최적화 아키텍처 탐색 알고리즘 개발",
+    "keywords": [
+      { "name": "LLM",         "icon": "far fa-comment-dots" },
+      { "name": "PIM",         "icon": "fas fa-memory" },
+      { "name": "NPU",         "icon": "fas fa-microchip" },
+      { "name": "Simulation",  "icon": "fas fa-laptop-code" },
+      { "name": "Optimization","icon": "fas fa-align-center" }
+    ],
+    "status": "in-progress"
+  },
+  {
+    "title": "거대인공신경망 처리 PIM-NPU 지원 시스템 SW 기술개발",
+    "orginization": "과학기술정보통신부 (정보통신기획평가원)",
+    "period": "23.04.01~27.12.31 (23.04.01~27.12.31)",
+    "role": "연구책임자 (공동)",
+    "main_org": "주식회사 사피온",
+    "short_description": "NPU-PIM 이기종 시스템의 프로파일링 성능 분석 기술 및 모니터링 도구 개발",
+    "keywords": [
+      { "name": "LLM",        "icon": "far fa-comment-dots" },
+      { "name": "PIM",        "icon": "fas fa-memory" },
+      { "name": "NPU",        "icon": "fas fa-microchip" },
+      { "name": "Profiling",  "icon": "fas fa-chart-area" },
+      { "name": "Benchmark",  "icon": "far fa-chart-bar" }
+    ],
+    "status": "in-progress"
+  },
+  {
+    "title": "재구성형 PIM 디바이스 기반의 Memory-Centric 아키텍처 개발",
+    "orginization": "과학기술정보통신부 (정보통신기획평가원)",
+    "period": "22.04.01~28.12.31 (22.04.01~28.12.31)",
+    "role": "연구책임자 (공동)",
+    "main_org": "고려대학교",
+    "short_description": "다중 PIM 기반 서버 시스템에서의 LLM 모델 포팅 및 실행 성능 측정 및 PIM SW 연동 프레임워크 개발",
+    "keywords": [
+      { "name": "LLM",            "icon": "far fa-comment-dots" },
+      { "name": "PIM",            "icon": "fas fa-memory" },
+      { "name": "Frameworks",     "icon": "far fa-file-code" },
+      { "name": "Paralellization","icon": "far fa-clone" }
+    ],
+    "status": "in-progress"
+  },
+  {
+    "title": "고효율 초저전력 경량 엣지 디바이스용 소자회로 및 SoC 개발",
+    "orginization": "산업통상자원부 (한국산업기술평가관리원)",
+    "period": "20.04.01.~24.06.30 (20.04.01~24.06.30)",
+    "role": "연구자 (주관)",
+    "main_org": "한국전자기술연구원",
+    "short_description": "엣지 NPU 기반 분류 및 객체검출 모델의 양자화 기술 및 실행 최적화 기술 개발",
+    "keywords": [
+      { "name": "EdgeAI",          "icon": "fas fa-microchip" },
+      { "name": "ObjectDetection", "icon": "far fa-object-group" },
+      { "name": "Quantization",    "icon": "fas fa-cubes" }
+    ],
+    "status": "Finished"
+  },
+  {
+    "title": "FO Package를 이용한 인공지능 3D IC 제조공정 기술",
+    "orginization": "산업통상자원부 (한국산업기술평가관리원)",
+    "period": "18.04.01~22.12.31 (18.04.01~22.12.31)",
+    "role": "연구자 (공동)",
+    "main_org": "주식회사 네패스",
+    "short_description": "RCE-NN 기반 머신러닝 네트워크 개발 SW 플랫폼 기술 개발 및 , BNN 기술 개발 및 PICE 기반 드라이버 및 CNN 기반 기술 개발, 관련 기술의 기술이전 수행 (3억)",
+    "keywords": [
+      { "name": "NPU",           "icon": "fas fa-microchip" },
+      { "name": "VisionAI",      "icon": "far fa-images" },
+      { "name": "Classification","icon": "fas fa-project-diagram" }
+    ],
+    "status": "Finished"
+  },
+  {
+    "title": "스마트 모바일 및 IoT 디바이스를 위한 뉴럴셀(Spiking Neural Cell)기반SNP SoC 원천기술개발",
+    "orginization": "산업통상자원부 (한국산업기술평가관리원)",
+    "period": "17.04.01~21.12.31 (17.04.01~21.12.31)",
+    "role": "연구자 (공동)",
+    "main_org": "한국전자기술연구원",
+    "short_description": "Spiking Neural Network / TSSL-BP 기반 학습 및 테스트 SW 프레임워크 개발 및 양자화 기술 개발, 관련 응용 기술 개발",
+    "keywords": [
+      { "name": "SNN",            "icon": "fab fa-schlix" },
+      { "name": "VisionAI",       "icon": "far fa-images" },
+      { "name": "Classification", "icon": "fas fa-project-diagram" }
+    ],
+    "status": "Finished"
+  },
+  {
+    "title": "신경모사 인지형 모바일 컴퓨팅 지능형반도체 기술개발",
+    "orginization": "과학기술정보통신부 (정보통신기획평가원)",
+    "period": "16.04.01~19.12.31 (18.01.01~19.12.31)",
+    "role": "연구자 (공동)",
+    "main_org": "ETRI",
+    "short_description": "DNN caffe 기반 분류 및 객체검출 네트워크의 실행 데이터 캡처 및 프로파일링 SW 플랫폼 기술 개발",
+    "keywords": [
+      { "name": "VisionAI", "icon": "far fa-images" },
+      { "name": "MLOPs",    "icon": "fas fa-infinity" }
+    ],
+    "status": "Finished"
+  }
+]
