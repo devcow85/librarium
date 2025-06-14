@@ -1,7 +1,7 @@
 [
   {
     "title": "Efficient Deployment and Execution of AI Models: A Comparative Study on Post Training Quantization Techniques with Emphasis on the Quantization Only Method",
-    "author": "Jeon, Seokhun and Choi, Kyu Hyun",
+    "author": "Jeon Seokhun, Choi Kyu Hyun",
     "booktitle": "The 9th International Conference on Next Generation Computing (ICNGC)",
     "name": "ICNGC",
     "pages": "1-3",
@@ -12,7 +12,7 @@
   },
   {
     "title": "Real-time motion classification with efficient event stream data processing",
-    "author": "Jeon, Seokhun; Park, Sihyeong; Kim, Kyungmo; Kim, Byung-Soo; Jang, Youngjong",
+    "author": "Jeon Seokhun, Park Sihyeong, Kim Kyungmo, Kim Byung-Soo, Jang Youngjong",
     "booktitle": "2023 IEEE International Conference on Consumer Electronics-Asia (ICCE-Asia)",
     "name": "ICCE-Asia",
     "pages": "1-3",
@@ -23,7 +23,7 @@
   },
   {
     "title": "A Study on concentric feature embeddings in variational multiclass classification for small-scale quantum computers",
-    "author": "Jeon, Seokhun; Hong, Yunpyo; Kim, Byung-Soo",
+    "author": "Jeon Seokhun, Hong Yunpyo, Kim Byung-Soo",
     "booktitle": "2023 IEEE International Conference on Quantum Computing and Engineering (QCE)",
     "name": "QCE",
     "volume": "2",
@@ -32,5 +32,17 @@
     "date": "Sep. 17 – 22",
     "organization": "IEEE",
     "link": "https://ieeexplore.ieee.org/document/10313595"
+  },
+    {
+    "title": "A Study on optimal power mode for efficient inference of large language models on edge devices",
+    "author": "Jeon Seokhun, Park Sihyeong",
+    "booktitle": "The 26th Conference on Electronics and Information Communications",
+    "name": "CEIC",
+    "volume": "PS2-06",
+    "pages": "1-3",
+    "year": 2024,
+    "date": "Dec. 11 – 13",
+    "organization": "KICS",
+    "link": "#"
   }
 ]

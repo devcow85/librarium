@@ -32,18 +32,54 @@ export default function Header() {
         </Link>
 
         {scrolledPastIntro && (
-          <div className="flex items-center space-x-2 border-gray-500/70 rounded-full border p-1">
-            <img src="/mymy.png" width={32} height={32} className="rounded-full" />
+  <div className="flex items-center space-x-2">
+    {/* 클릭 불가한 텍스트 */}
+    <span className="get-in-touch text-sm">
+      Get in Touch
+    </span>
 
-            <span className="text-white text-sm font-medium">Seokhun Jeon</span>
-            <a
-              href="mailto:seokhun.jeon@keti.re.kr"
-              className="text-gray-200 border border-gray-600 p-1.5 rounded-full hover:bg-gray-800 transition"
-            >
-              <img src="/mail.svg" width={20} height={20} />
-            </a>
-          </div>
-        )}
+    {/* 클릭 가능한 아바타 */}
+    <a
+      href="mailto:seokhun.jeon@keti.re.kr"
+      className="
+        group
+        relative
+        w-8 h-8
+        rounded-full
+        overflow-hidden
+        transition-all duration-200 ease-in-out
+        cursor-pointer
+      "
+    >
+      <img
+        src="/mymy.png"
+        alt="mymy"
+        className="
+          w-full h-full
+          object-cover
+          transition-opacity duration-200 ease-in-out
+          group-hover:opacity-0
+        "
+      />
+
+      <div
+        className="
+          absolute inset-0
+          flex items-center justify-center
+          bg-[var(--brand)]
+          opacity-0 group-hover:opacity-100
+          transition-opacity duration-200 ease-in-out
+        "
+      >
+        <img
+          src="/mail.svg"
+          alt="메일 아이콘"
+          className="w-5 h-5"
+        />
+      </div>
+    </a>
+  </div>
+)}
       </div>
     </header>
   );

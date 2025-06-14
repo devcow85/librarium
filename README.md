@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Librarium
 
-## Getting Started
+Librarium is a personal portfolio website built as a static one-page site. It uses JSON data to dynamically render all technical information in a single page and is easily deployed on Vercel for fast, reliable hosting.
 
-First, run the development server:
+---
+
+## 🔗 Live Demo
+
+Visit: [https://librarium-indol.vercel.app/](https://librarium-indol.vercel.app/)
+
+---
+
+## 🚀 Key Features
+
+* **Single-Page Portfolio**: All sections (About, Skills, Projects, Blog links, etc.) are generated from a single JSON file.
+* **Static Site Generation**: Built with Next.js (or your chosen SSG framework), providing fast load times and SEO benefits.
+* **JSON-Driven Content**: Update portfolio content by editing JSON—no code changes required.
+* **Responsive Design**: Works seamlessly on mobile, tablet, and desktop devices.
+* **Vercel Deployment**: Connect your GitHub repo to Vercel for automatic builds and deployments on every commit.
+
+---
+
+## 📦 Installation & Setup
 
 ```bash
+# Clone the repository
+git clone https://github.com/devcow85/librarium.git
+cd librarium
+
+# Install dependencies
+npm install
+# or
+yarn install
+
+# Start development server
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To create a production build and preview:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+# or
+yarn build
+yarn start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🗂️ Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+librarium/
+├─ public/             # Static assets (icons, images)
+├─ app/
+├─ components/         # React components
+├─ data/
+│  ├─ intro.json       # Portfolio content
+│  ├─ articles.json    # Publication content
+│  └─ projects.json    # Projects content
+├─ .gitignore
+├─ ...
+├─ package.json
+└─ README.md
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ JSON Data Example
 
-## Deploy on Vercel
+Define your portfolio in `src/data/intro.json`:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```json
+{
+  "name": "Your Name",
+  "position": "Software Engineer, Researcher, Open Source Contributor",
+  "description": "...",
+  "expertise": [
+    "SW Framework",
+    "Simulation",
+    "Quantum Computing",
+    "SW-HW Co-design / optimization"
+  ],
+  "education": [
+    {"university": "XX University",
+    "degree": "M.S Degree",
+    "major": "Electronics Engineering",
+    "graduation_date": "Feb, 2012"},
+    {"university": "XX University",
+    "degree": "B.S Degree",
+    "major": "Electronics Engineering",
+    "graduation_date": "Feb, 2010"}
+  ],
+  "professional_experience": [
+    {"job_title": "Researcher",
+    "company": "XX",
+    "location": "XX",
+    "dates": "Dec, 2020 - Present"},
+    {"job_title": "Senior Engineer",
+    "company": "XX",
+    "location": "XX",
+    "dates": "Apr, 2010 - Mar, 2020"}]
+}
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## ☁️ Deployment on Vercel
+
+1. Link your GitHub repository to Vercel.
+2. Set the build command to `npm run build` (or `yarn build`).
+3. Deploy and enjoy automatic updates on every push.
+
+---
+
+## 🤝 Contributing
+
+1. Create an issue or submit a pull request.
+2. Follow code style guidelines (Prettier + ESLint).
+3. Ensure tests pass and build succeeds before merging.
+
+---
+
+## 📄 License
+
+MIT © Seokhun

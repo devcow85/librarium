@@ -47,7 +47,7 @@ export default function Achievements() {
     // 연도 내림차순 정렬
     .sort((a, b) => parseInt(b.year) - parseInt(a.year));
 
-  const visible = showAll ? rows : rows.slice(0, 3);
+  const visible = showAll ? rows : rows.slice(0, 10);
 
   return (
     <div className="py-16 md:py-24 bg-black text-gray-200 mt-4">
@@ -112,24 +112,26 @@ export default function Achievements() {
                         )}
                       </h4>
                       <p className="text-gray-400 text-xs mb-1">
-                        <span className="font-medium text-gray-500">Name:</span> {a.name}
+                        <span className="font-medium text-gray-500"></span> {a.name},
+                        <span className="font-medium text-gray-500"></span> {a.year},
+                        <span className="font-medium text-gray-500"></span> {a.date}
                       </p>
                       <p className="text-gray-400 text-xs mb-1">
-                        <span className="font-medium text-gray-500">Author:</span>{' '}
+                        <span className="font-medium text-gray-500"></span>{' '}
                         {formatAuthor(a.author)}
                       </p>
                       <p className="text-gray-400 text-xs mb-1">
-                        <span className="font-medium text-gray-500">Year:</span> {a.year}
+                        
                       </p>
                       <p className="text-gray-400 text-xs">
-                        <span className="font-medium text-gray-500">Date:</span> {a.date}
+                        
                       </p>
                     </div>
                   </div>
                 );
               })}
 
-              {rows.length > 3 && (
+              {rows.length > 10 && (
                 <div className="mt-6 text-center">
                   <button
                     onClick={() => setShowAll(!showAll)}

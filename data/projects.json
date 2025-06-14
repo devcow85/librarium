@@ -47,6 +47,21 @@
     "status": "in-progress"
   },
   {
+    "title": "AI기반 영상변화량 추적이 가능한 동적 비전 센서용 영상처리 SoC 개발",
+    "orginization": "산업통상자원부 (KIAT)",
+    "period": "20.04.01~23.12.31 (20.04.01~23.12.31)",
+    "role": "실무책임자",
+    "main_org": "아르고",
+    "short_description": "이벤트 카메라 기반 데이터 스트림 처리를 위한 스파이킹 뉴럴 네트워크 기반 객체 검출 모델 개발 및 SoC 연동 데모 플랫폼 구축",
+    "keywords": [
+      { "name": "SNN",            "icon": "far fa-comment-dots" },
+      { "name": "SoC",            "icon": "fas fa-memory" },
+      { "name": "Event-Camera",     "icon": "far fa-file-code" },
+      { "name": "Training","icon": "far fa-clone" }
+    ],
+    "status": "in-progress"
+  },
+  {
     "title": "고효율 초저전력 경량 엣지 디바이스용 소자회로 및 SoC 개발",
     "orginization": "산업통상자원부 (한국산업기술평가관리원)",
     "period": "20.04.01.~24.06.30 (20.04.01~24.06.30)",
