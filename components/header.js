@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { ArrowRight, Mail } from '@geist-ui/icons'
 
 export default function Header() {
   const [scrolledPastIntro, setScrolledPastIntro] = useState(false);
@@ -24,9 +25,9 @@ export default function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-black">
       <div className="mx-auto max-w-5xl flex justify-between items-center gap-2 px-5 py-7">
-        <Link href="#home" className="flex items-center gap-2">
-          <img src="/logo.svg" alt="Logo" width={27} height={27} />
-          <span className="text-4xl font-extrabold tracking-wide uppercase">
+        <Link href="#home" className="flex items-center gap-1">
+          <img src="/logo.svg" alt="Logo" width={23} height={23} />
+          <span className="text-3xl font-extrabold tracking-wide uppercase">
             Librarium
           </span>
         </Link>
@@ -34,9 +35,11 @@ export default function Header() {
         {scrolledPastIntro && (
   <div className="flex items-center space-x-2">
     {/* 클릭 불가한 텍스트 */}
-    <span className="get-in-touch text-sm">
+    <span className="flex gap-2 get-in-touch text-sm text-blue-500">
       Get in Touch
+      <ArrowRight size={21} />
     </span>
+    
 
     {/* 클릭 가능한 아바타 */}
     <a
@@ -71,11 +74,7 @@ export default function Header() {
           transition-opacity duration-200 ease-in-out
         "
       >
-        <img
-          src="/mail.svg"
-          alt="메일 아이콘"
-          className="w-5 h-5"
-        />
+        <Mail size={18}/>
       </div>
     </a>
   </div>

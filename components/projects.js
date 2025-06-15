@@ -3,6 +3,7 @@
 
 import { useState } from 'react';
 import projects from '@/data/projects.json';
+import * as Icons from '@geist-ui/icons';
 
 export default function ProjectCards() {
   const [showAll, setShowAll] = useState(false);
@@ -16,9 +17,9 @@ export default function ProjectCards() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
           {/* ───────── 왼쪽 설명 ───────── */}
           <div className="lg:col-span-1">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white">
+            <h1 className="text-3xl md:text-4xl font-bold mb-8 text-white">
               Research Projects Snapshot
-            </h2>
+            </h1>
             <ul className="space-y-5 text-gray-300 text-sm">
               <li className="flex items-center">
                 <svg
@@ -91,67 +92,52 @@ export default function ProjectCards() {
             </ul>
           </div>
 
-          {/* ───────── 카드 그리드 ───────── */}
           <div className="lg:col-span-2 pt-3">
             <div
               id="project-cards-grid"
               className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6"
             >
-              {visible.map((p) => (
-                <button
-                  key={p.title}
-                  onClick={() => setSelected(p)}
-                  className="bg-gray-800/50 border border-gray-700/80 rounded-lg p-5 flex items-center gap-2 hover:border-gray-600 transition-all duration-300 text-left w-full"
-                >
-                  {/* 아이콘 원형: in-progress 프로젝트는 브랜드 색상으로 배경 */}
-                  <div
-                    className={`relative aspect-square w-12 h-12 rounded-full flex items-center justify-center ${
-                      p.status === 'in-progress'
-                        ? 'bg-[var(--brand)]'
-                        : 'bg-black'
-                    } shrink-0`}
+              {visible.map((p, idx) => {
+                // Use project.icon or fallback
+                const IconComponent = Icons[p.icon]|| Icons.Github ; 
+
+                return (
+                  <button
+                    key={p.title + idx}
+                    onClick={() => setSelected(p)}
+                    className="bg-gray-800/50 border border-gray-700/80 rounded-lg p-5 flex items-center gap-3 hover:border-gray-600 transition-all duration-300 text-left w-full"
                   >
-                    <i
-                      className={`${
-                        p.keywords?.[2]?.icon || 'fas fa-book'
-                      } text-white text-lg`}
-                    />
-                  </div>
-                  {/* 제목 */}
-                  <h3 className="text-xs font-medium text-white leading-tight">
-                    {p.title}
-                  </h3>
-                </button>
-              ))}
+                    {/* 프로젝트별 대표 아이콘 */}
+                    <div
+                      className={`relative w-12 h-12 rounded-full flex items-center justify-center shrink-0 ${
+                        p.status === 'in-progress'
+                          ? 'bg-[var(--brand)]'
+                          : 'bg-black'
+                      }`}
+                    >
+                      <IconComponent size={20} className="text-white" />
+                    </div>
+                    {/* 제목 */}
+                    <h3 className="text-xs font-medium text-white leading-tight">
+                      {p.title}
+                    </h3>
+                  </button>
+                );
+              })}
             </div>
 
             {projects.length > 4 && (
               <div className="mt-8 text-center">
                 <button
                   onClick={() => setShowAll(!showAll)}
-                  className=""
+                  className="text-gray-500 hover:text-[var(--brand)] transition-colors duration-200"
                 >
-                    <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6 text-gray-400 hover:text-white cursor-pointer transition-colors"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    >
-                    {showAll ? (
-                        // 화살표 위로
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
-                    ) : (
-                        // 화살표 아래로
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                    )}
-                    </svg>
-                  
+                  {showAll ? <Icons.ChevronUp size={24} /> : <Icons.ChevronDown size={24} />}
                 </button>
               </div>
             )}
           </div>
+
         </div>
       </div>
 
@@ -169,9 +155,9 @@ export default function ProjectCards() {
             <div className="p-6 border-b border-gray-700">
               <h3 className="text-2xl font-semibold">{selected.title}</h3>
               {/* ② 배지 및 기간: Title 바로 아래에 배치 */}
-              <div className="mt-2 flex items-center space-x-3">
-                <img src="/calendar.svg" width={15} height={15} className="mr-2" />
-                <span className="text-xs text-gray-400">
+              <div className="mt-2 flex items-center text-gray-400 space-x-3">
+                <Icons.Calendar size={15}/>
+                <span className="text-xs">
                   {selected.period.split('(')[0].trim()}
                 </span>
                 <span
@@ -184,40 +170,76 @@ export default function ProjectCards() {
                   {selected.status.replace('-', ' ')}
                 </span>
               </div>
+              <div className="text-xs text-gray-400 space-y-1">
+                <p className='flex'>
+                  <Icons.Package size={15} className="mr-3"/>
+                  {selected.orginization}
+                </p>
+                <p className='flex'>
+                   <Icons.User size={15} className="mr-3"/>
+                  {selected.role}
+                </p>
+                <p className='flex'>
+                   <Icons.Pin size={15} className="mr-3"/>
+                  {selected.main_org}
+                </p>
+              </div>
             </div>
-
+            
             {/* ③ Content 영역: status와 period 제외 */}
             <div className="p-6 overflow-y-auto">
               <p className="text-gray-300 mb-4 text-sm">
                 {selected.short_description}
               </p>
-              <div className="grid grid-cols-2 gap-4 text-sm text-gray-400">
-                <div>
-                  <p>
-                    <span className="text-gray-500">Organization:</span>{' '}
-                    {selected.orginization}
-                  </p>
-                  <p>
-                    <span className="text-gray-500">Role:</span> {selected.role}
-                  </p>
-                </div>
-                <div>
-                  <p>
-                    <span className="text-gray-500">Main Org:</span>{' '}
-                    {selected.main_org}
-                  </p>
-                </div>
-              </div>
+              
               <div className="mt-4 flex flex-wrap gap-2">
                 {selected.keywords?.map((k) => (
                   <span
-                    key={k.name}
+                    key={k}
                     className="bg-gray-800 border border-gray-700 text-xs px-3 py-1 rounded-full flex items-center gap-1"
                   >
-                    <i className={`${k.icon}`} /> {k.name}
+                    {k}
                   </span>
                 ))}
               </div>
+            </div>
+
+            {/* ④ Links */}
+            <div className="px-6 border-t border-gray-700">
+              <ul className="text-xs text-gray-200">
+                {selected.links?.map((link, i) => {
+                  const displayText =
+                    link.type === 'file'
+                      ? decodeURIComponent(link.url.split('/').pop() || link.url)
+                      : link.url
+
+                  return (
+                    <li
+                      key={i}
+                      className="
+                        -mx-6 px-6 flex items-center gap-2 py-2
+                        border-b border-dashed border-gray-700
+                        last:border-b-0
+                      "
+                    >
+                      {/* 아이콘 */}
+                      {link.type === 'github' && <Icons.Github size={12} />}
+                      {link.type === 'file'   && <Icons.Paperclip size={12} />}
+                      {link.type === 'url'    && <Icons.ExternalLink size={12} />}
+
+                      {/* 텍스트 */}
+                      <a
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="truncate hover:text-[var(--brand)]"
+                      >
+                        {displayText}
+                      </a>
+                    </li>
+                  )
+                })}
+              </ul>
             </div>
           </div>
         </div>

@@ -1,119 +1,176 @@
 [
   {
-    "title": "시뮬레이션 기반 고속/고정확도 데이터센터 워크로드/시스템 분석 플랫폼 개발",
-    "orginization": "과학기술정보통신부 (정보통신기획평가원)",
+    "title": "Simulation-based High-speed/High-Accuracy Data Center Workload/System Analysis Platform",
+    "orginization": "IITP",
     "period": "24.04.01~27.12.31 (24.04.01~27.12.31)",
-    "role": "연구책임자 (주관)",
-    "main_org": "한국전자기술연구원",
-    "short_description": "시뮬레이터 기반 최적 transformer 실행을 위한 프로파일링 및 실행 최적화 아키텍처 탐색 알고리즘 개발",
+    "role": "Project Leader",
+    "main_org": "Korea Electronics Technology Institute",
+    "short_description": "Development of optimal server-architecture exploration algorithms for efficient execution of simulation-based LLM workloads",
     "keywords": [
-      { "name": "LLM",         "icon": "far fa-comment-dots" },
-      { "name": "PIM",         "icon": "fas fa-memory" },
-      { "name": "NPU",         "icon": "fas fa-microchip" },
-      { "name": "Simulation",  "icon": "fas fa-laptop-code" },
-      { "name": "Optimization","icon": "fas fa-align-center" }
+      "Large-scale AI workload analysis",
+      "Server system modeling",
+      "Server system profiling",
+      "AI-semiconductor-based data center",
+      "High-speed/High-accuracy simulator"
     ],
-    "status": "in-progress"
+    "status": "in-progress",
+    "links": [
+     {
+       "type": "github",
+       "label": "vChatSim",
+       "url": "https://github.com/devcow85/vchatsim"
+     },
+     {
+       "type": "file",
+       "label": "Design Spec (PDF)",
+       "url": "/docs/simulation-design-spec.pdf"
+     },
+     {
+       "type": "url",
+       "label": "Live Demo",
+       "url": "https://simulation.example.com"
+     }
+   ],
+   "icon":"Display"
   },
   {
-    "title": "거대인공신경망 처리 PIM-NPU 지원 시스템 SW 기술개발",
-    "orginization": "과학기술정보통신부 (정보통신기획평가원)",
+    "title": "PIM-NPU Based Processing System Software Developments for Hyper-scale Artificial Neural Network Processing",
+    "orginization": "IITP",
     "period": "23.04.01~27.12.31 (23.04.01~27.12.31)",
-    "role": "연구책임자 (공동)",
-    "main_org": "주식회사 사피온",
-    "short_description": "NPU-PIM 이기종 시스템의 프로파일링 성능 분석 기술 및 모니터링 도구 개발",
+    "role": "Co-Project Leader",
+    "main_org": "Rebellions",
+    "short_description": "Development of profiling performance-analysis techniques and monitoring tools for NPU-PIM heterogeneous systems",
     "keywords": [
-      { "name": "LLM",        "icon": "far fa-comment-dots" },
-      { "name": "PIM",        "icon": "fas fa-memory" },
-      { "name": "NPU",        "icon": "fas fa-microchip" },
-      { "name": "Profiling",  "icon": "fas fa-chart-area" },
-      { "name": "Benchmark",  "icon": "far fa-chart-bar" }
+      "Processing in Memory",
+      "Neural Processing Unit",
+      "Hyper-scale Artificial Neural Network", 
+      "Large language model",
+      "Server system profiling"
     ],
-    "status": "in-progress"
+    "status": "in-progress",
+    "links": [
+    ],
+    "icon":"PieChart"
   },
   {
-    "title": "재구성형 PIM 디바이스 기반의 Memory-Centric 아키텍처 개발",
-    "orginization": "과학기술정보통신부 (정보통신기획평가원)",
+    "title": "Memory-Centric Architecture Using the Reconfigurable PIM Devices",
+    "orginization": "IITP",
     "period": "22.04.01~28.12.31 (22.04.01~28.12.31)",
-    "role": "연구책임자 (공동)",
-    "main_org": "고려대학교",
-    "short_description": "다중 PIM 기반 서버 시스템에서의 LLM 모델 포팅 및 실행 성능 측정 및 PIM SW 연동 프레임워크 개발",
+    "role": "Co-Project Leader",
+    "main_org": "Korea University",
+    "short_description": "Porting LLM models to multi-PIM–based server systems, measuring execution performance, and developing a PIM software integration framework",
     "keywords": [
-      { "name": "LLM",            "icon": "far fa-comment-dots" },
-      { "name": "PIM",            "icon": "fas fa-memory" },
-      { "name": "Frameworks",     "icon": "far fa-file-code" },
-      { "name": "Paralellization","icon": "far fa-clone" }
+      "Hardware reconfiguration",
+      "Software reconfiguration",
+      "In memory computing",
+      "System software",
+      "Large language model"
     ],
-    "status": "in-progress"
+    "status": "in-progress",
+    "links": [
+      {
+        "type": "github",
+        "label": "PiMemPy",
+        "url": "https://github.com/devcow85/pimempy"
+      }
+    ],
+    
+    "icon":"Film"
   },
   {
-    "title": "AI기반 영상변화량 추적이 가능한 동적 비전 센서용 영상처리 SoC 개발",
-    "orginization": "산업통상자원부 (KIAT)",
-    "period": "20.04.01~23.12.31 (20.04.01~23.12.31)",
-    "role": "실무책임자",
-    "main_org": "아르고",
-    "short_description": "이벤트 카메라 기반 데이터 스트림 처리를 위한 스파이킹 뉴럴 네트워크 기반 객체 검출 모델 개발 및 SoC 연동 데모 플랫폼 구축",
+    "title": "Development of image processing SoC for AI based dynamic vision sensor capable of tracking image variance",
+    "orginization": "KEIT",
+    "period": "22.04.01~25.12.31 (20.04.01~23.12.31)",
+    "role": "Researcher",
+    "main_org": "ARGO",
+    "short_description": "Development of a spiking-neural-network–based object detection model for event-camera–based data-stream processing and construction of an SoC integration demo platform",
     "keywords": [
-      { "name": "SNN",            "icon": "far fa-comment-dots" },
-      { "name": "SoC",            "icon": "fas fa-memory" },
-      { "name": "Event-Camera",     "icon": "far fa-file-code" },
-      { "name": "Training","icon": "far fa-clone" }
+      "Mobility camera",
+      "System-on-Chip",
+      "Dynamic vision sensor",
+      "Event signal processing",
+      "Spiking neural network"
     ],
-    "status": "in-progress"
+    "status": "in-progress",
+    "links": [
+      {
+        "type": "github",
+        "label": "torchevent",
+        "url": "https://github.com/devcow85/torchevent"
+      }
+    ],
+    "icon":"MoreVertical"
   },
   {
-    "title": "고효율 초저전력 경량 엣지 디바이스용 소자회로 및 SoC 개발",
-    "orginization": "산업통상자원부 (한국산업기술평가관리원)",
+    "title": "The development of High efficient low power circuit element and SoC for the light weight edge device",
+    "orginization": "KEIT",
     "period": "20.04.01.~24.06.30 (20.04.01~24.06.30)",
-    "role": "연구자 (주관)",
-    "main_org": "한국전자기술연구원",
-    "short_description": "엣지 NPU 기반 분류 및 객체검출 모델의 양자화 기술 및 실행 최적화 기술 개발",
+    "role": "Researcher",
+    "main_org": "Korea Electronics Technology Institute",
+    "short_description": "Development of quantization and execution-optimization techniques for classification and object-detection models on edge NPUs",
     "keywords": [
-      { "name": "EdgeAI",          "icon": "fas fa-microchip" },
-      { "name": "ObjectDetection", "icon": "far fa-object-group" },
-      { "name": "Quantization",    "icon": "fas fa-cubes" }
+      "Edge device",
+      "Neuromorphic",
+      "Object detection",
+      "Quantization"
     ],
-    "status": "Finished"
+    "status": "Finished",
+    "links": [
+      {
+        "type": "github",
+        "label": "fx-quantizer-addon",
+        "url": "https://github.com/devcow85/fx-quantizer-addon"
+      }
+    ],
+    "icon":"Cpu"
   },
   {
-    "title": "FO Package를 이용한 인공지능 3D IC 제조공정 기술",
-    "orginization": "산업통상자원부 (한국산업기술평가관리원)",
+    "title": "Development of AI 3D IC Fabrication Process Technology using a FO Package",
+    "orginization": "KEIT",
     "period": "18.04.01~22.12.31 (18.04.01~22.12.31)",
-    "role": "연구자 (공동)",
-    "main_org": "주식회사 네패스",
-    "short_description": "RCE-NN 기반 머신러닝 네트워크 개발 SW 플랫폼 기술 개발 및 , BNN 기술 개발 및 PICE 기반 드라이버 및 CNN 기반 기술 개발, 관련 기술의 기술이전 수행 (3억)",
+    "role": "Researcher",
+    "main_org": "NEPES",
+    "short_description": "Development of system software—including model conversion techniques for executing CNN and binarized neural network models on NPUs—and an integrated software platform for training and inference",
     "keywords": [
-      { "name": "NPU",           "icon": "fas fa-microchip" },
-      { "name": "VisionAI",      "icon": "far fa-images" },
-      { "name": "Classification","icon": "fas fa-project-diagram" }
+      "Low-power classifier",
+      "Binarized neural network",
+      "System software",
+      "Sensor signal processing"
     ],
-    "status": "Finished"
+    "status": "Finished",
+    "icon":"Cpu"
   },
   {
-    "title": "스마트 모바일 및 IoT 디바이스를 위한 뉴럴셀(Spiking Neural Cell)기반SNP SoC 원천기술개발",
-    "orginization": "산업통상자원부 (한국산업기술평가관리원)",
+    "title": "Development of SoC technology based on Spiking Neural Cell for smart mobile and IoT Devices",
+    "orginization": "KEIT",
     "period": "17.04.01~21.12.31 (17.04.01~21.12.31)",
-    "role": "연구자 (공동)",
-    "main_org": "한국전자기술연구원",
-    "short_description": "Spiking Neural Network / TSSL-BP 기반 학습 및 테스트 SW 프레임워크 개발 및 양자화 기술 개발, 관련 응용 기술 개발",
+    "role": "Researcher",
+    "main_org": "Korea Electronics Technology Institute",
+    "short_description": "Development of training and inference software and hardware co-execution technologies for various spike-based neural networks, such as STDP and TSSL-BP",
     "keywords": [
-      { "name": "SNN",            "icon": "fab fa-schlix" },
-      { "name": "VisionAI",       "icon": "far fa-images" },
-      { "name": "Classification", "icon": "fas fa-project-diagram" }
+      "Spiking Neural Cell",
+      "Parallel-Spiking Neuron Cell",
+      "Neural Processing Unit",
+      "System-on-Chip"
     ],
-    "status": "Finished"
+    "status": "Finished",
+    "icon":"GitBranch"
   },
   {
-    "title": "신경모사 인지형 모바일 컴퓨팅 지능형반도체 기술개발",
-    "orginization": "과학기술정보통신부 (정보통신기획평가원)",
+    "title": "Brain-Inspired Neuromorphic Perception and Learning Processor",
+    "orginization": "IITP",
     "period": "16.04.01~19.12.31 (18.01.01~19.12.31)",
-    "role": "연구자 (공동)",
+    "role": "Researcher",
     "main_org": "ETRI",
-    "short_description": "DNN caffe 기반 분류 및 객체검출 네트워크의 실행 데이터 캡처 및 프로파일링 SW 플랫폼 기술 개발",
+    "short_description": "Development of a software platform for execution data capturing and profiling of DNN-Caffe–based classification and object-detection networks",
     "keywords": [
-      { "name": "VisionAI", "icon": "far fa-images" },
-      { "name": "MLOPs",    "icon": "fas fa-infinity" }
+      "Brain-Inspired",
+      "Neuromorphic",
+      "On-Chip Learning",
+      "Perception Processor",
+      "Visual Intelligence"
     ],
-    "status": "Finished"
+    "status": "Finished",
+    "icon":"Code"
   }
 ]

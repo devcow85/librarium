@@ -3,6 +3,7 @@
 
 import { useState, useMemo } from 'react';
 import achievements from '@/data/articles.json';
+import {Info, Users, ExternalLink } from '@geist-ui/icons'
 
 // 탭: Publications, Patents, Tech Transfer
 const TABS = [
@@ -51,18 +52,19 @@ export default function Achievements() {
 
   return (
     <div className="py-16 md:py-24 bg-black text-gray-200 mt-4">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto">
         {/* 타이틀 & 요약 */}
-        <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
-          <p className="text-3xl md:text-3xl lg:text-4xl font-bold text-gray-100">
+        <div className="max-w-3xl mx-auto text-center px-12 mb-8 md:mb-12">
+          <h1 className="text-3xl md:text-3xl lg:text-4xl font-bold text-gray-100">
             Research Achievements Overview
-          </p>
-          <p className="mt-4 text-gray-400">
+          </h1>
+          <h2 className="mt-4 text-gray-400">
             The overall statistics and detailed records of our research outputs—publications, patents, and technology transfers.
-          </p>
+          </h2>
         </div>
 
         {/* 통계 박스 (클릭 시 탭 전환) */}
+        <div className="px-0">
         <div className="max-w-2xl mx-auto grid grid-cols-3 border-l border-gray-700 mb-12">
           {TABS.map((t) => (
             <div
@@ -82,18 +84,19 @@ export default function Achievements() {
             </div>
           ))}
         </div>
+        </div>
 
         {/* 콘텐츠 영역: 리스트 형태로 (년도별 섹션) */}
-        <div id="tab-content-area">
+        <div id="tab-content-area" className="px-6">
           {activeTab === 'publications' && (
-            <div className="space-y-2">
+            <div>
               {visible.map((a, idx) => {
                 const prevYear = idx === 0 ? null : visible[idx - 1].year;
                 const showYearLabel = a.year !== prevYear;
                 return (
                   <div key={a.title}>
                     {showYearLabel && (
-                      <div className="py-2 border-b border-gray-700">
+                      <div className="mt-3 py-2 border-b border-gray-700">
                         <p className="text-2xl font-extrabold text-gray-500">{a.year}</p>
                       </div>
                     )}
@@ -107,24 +110,18 @@ export default function Achievements() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center text-blue-400 hover:text-blue-300 ml-1"
                           >
-                            <i className="fas fa-link text-xs" />
+                            <ExternalLink size={12}/>
                           </a>
                         )}
                       </h4>
-                      <p className="text-gray-400 text-xs mb-1">
-                        <span className="font-medium text-gray-500"></span> {a.name},
-                        <span className="font-medium text-gray-500"></span> {a.year},
-                        <span className="font-medium text-gray-500"></span> {a.date}
+                      <p className="flex items-center text-gray-400 text-xs mb-1">
+                        <Info size={12} className="mr-1" />
+                        <span className="font-medium text-gray-500"></span> {a.name}, {a.year}, {a.date}
                       </p>
-                      <p className="text-gray-400 text-xs mb-1">
+                      <p className="flex items-center text-gray-400 text-xs mb-1">
+                        <Users size={12} className="mr-1" />
                         <span className="font-medium text-gray-500"></span>{' '}
                         {formatAuthor(a.author)}
-                      </p>
-                      <p className="text-gray-400 text-xs mb-1">
-                        
-                      </p>
-                      <p className="text-gray-400 text-xs">
-                        
                       </p>
                     </div>
                   </div>

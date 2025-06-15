@@ -7,9 +7,12 @@ import Footer from '@/components/footer';
 export default function HomePage() {
   return (
     <>
-      <main className="pt-16">
-        <Intro />
-        <Projects />
+      <main className="pt-20">
+        <div className="px-6">
+          <Intro />
+          <Projects />
+        </div>
+        
         <Achievements />
         <Footer />
       </main>
